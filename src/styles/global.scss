@@ -1,0 +1,24 @@
+:root {
+    --textColorBase: #121214;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: var(--textColorBase);
+}
+
+a {
+    text-decoration: none;
+    color: var(--textColorBase);
+}
+
+ul, li {
+    text-decoration: none;
+    list-style: none;
+}
