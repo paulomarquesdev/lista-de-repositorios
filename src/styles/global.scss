@@ -1,5 +1,8 @@
 :root {
-    --textColorBase: #121214;
+    --backgroundBase: #121214;
+    --backgroundCard: #333D46;
+    --textColorBase: #FAFAFA;
+    --textColorBase2: #DBDBDB;
 }
 
 * {
@@ -10,7 +13,11 @@
 
 body {
     font: 16px Arial, Helvetica, sans-serif;
+    background-color: var(--backgroundBase);
     color: var(--textColorBase);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
