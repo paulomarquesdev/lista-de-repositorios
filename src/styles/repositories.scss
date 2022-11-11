@@ -1,28 +1,71 @@
 section.repository-list {
-    margin: 40px;
+    margin: 10vh 8vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
     h1 {
-        margin-bottom: 16px;
+        display: inline-block;
+        text-align: center;
+        color: var(--textColorBase);
+        font-size: 32px;
     }
 
     ul {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 36px;
         
         li {
+            width: 400px;
+            min-width: 300px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            
+            gap: 12px;
+            background-color: var(--backgroundCard);
+            padding: 24px;
+            justify-content: space-between;
+            border-radius: 8px;
 
+
+            strong {
+                color: var(--textColorBase);
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+            
             p {
+                margin-top: 16px;
                 font-size: 14px;
-                color: #444;
+                color: var(--textColorBase2);
             }
 
             a {
+                margin-top: 12px;
                 display: inline-block;
-                color: #8257e6;
+                background-color: #DBDBDB;
+                padding: 0.8rem 1.6rem;
+                color: #363636;
+                text-align: center;
+                border-radius: 5px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.repository-list {
+        margin: 12% 10%;
+        
+        ul {
+            li {
+                width: 300px;
+                min-width: 250px;
             }
         }
     }

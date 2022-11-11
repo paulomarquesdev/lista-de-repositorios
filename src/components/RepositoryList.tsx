@@ -1,12 +1,20 @@
-import { RepositoryItem } from './RepositoryItem';
-import '../styles/repositories.scss';
 import { useState, useEffect } from 'react';
+import { RepositoryItem } from './RepositoryItem';
 
+
+import '../styles/repositories.scss';
+
+interface Repository {
+    name: string;
+    description: string;
+    html_url: string;
+}
 
 export function RepositoryList(){
-    const [repositories, setRepositories] = useState([]);
+    // Para informar o tipo do que será armazenado dentro do estado
+    const [repositories, setRepositories] = useState<Repository[]>([]);
 
-    // Two parameters. First parameter a function that is called. Second parameter is a variable that call a function that change
+    // Dois parametros. Primero, a função que será chamada. Segunda, a variável que quando sofrer alteração dispara a função
     useEffect(() => {
         fetch('https://api.github.com/users/paulomarquesdev/repos')
             .then(res => res.json())
@@ -20,7 +28,7 @@ export function RepositoryList(){
             <ul>
                 {repositories.map((repository) => {
                     return (
-                        <RepositoryItem key={repository.id} repository={repository} />
+                        <RepositoryItem key={repository.name} repository={repository} />
                     )
                 })}
             </ul>

@@ -27,3 +27,35 @@
 
 - useState  : Contém dois elementos, o valor do estado e uma função set
 - useEffect : Dispara uma função quando algo acontecer na aplicação
+
+## TypeScript
+
+### Configuração
+
+- Instalação: `yarn add typescript -D`
+- Inicialização do TypeScript: `yarn tsc --init`
+- Config tsconfig: {
+    - "compilerOptions": {
+        Add/Active
+        ```
+            "lib": ["dom", "dom.iterable", "esnext"],
+            "allowJs": true,
+            "allowSyntheticDefaultImports": true,
+            "skipLibCheck": true,
+            "esModuleInterop": true,
+            "strict": true,
+            "forceConsistentCasingInFileNames": true,
+            "moduleResolution": "node",
+            "resolveJsonModule": true,
+            "isolatedModules": true,
+            "noEmit": true,
+            "jsx": "react-jsx",
+        ```
+
+        Remove/Delete
+        ```
+            "target": "es5",
+            "module": "commonjs",
+        ```
+    - `"include": ["src"]`
+}
